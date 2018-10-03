@@ -9,7 +9,17 @@ TENS = {  0 => 'zero',
           8 => 'eight',
           9 => 'nine',
           10 => 'ten' }.freeze
+ELEVEN_TO_TWENTY = { 11 => 'eleven',
+                     12 => 'twelve',
+                     13 => 'thirteen',
+                     14 => 'fourteen',
+                     15 => 'fifteen',
+                     16 => 'sixteen',
+                     17 => 'seventeen',
+                     18 => 'eighteen',
+                     19 => 'nineteen',
+                     20 => 'twenty' }.freeze
 
 def number_to_words(num)
-  TENS[num]
+  num <= 10 ? TENS[num] : ELEVEN_TO_TWENTY[num]
 end
