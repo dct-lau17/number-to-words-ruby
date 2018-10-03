@@ -34,6 +34,8 @@ def number_to_words(int)
     tens(int)
   elsif less_than_1000?(int)
     hundreds(int)
+  else
+    thousands(int)
   end
 end
 
@@ -64,6 +66,11 @@ def hundreds(num)
   word << [WORDS[num_array[0].to_i], WORDS[100]].join('-')
   word << tens(num.to_s.slice(1,2).to_i) if not_divisible_by_100?(num)
   word.join(' and ')
+end
+
+def thousands(num)
+  num_array = num.to_s.split('')
+  [WORDS[num_array[0].to_i], WORDS[1000]].join('-')
 end
 
 def not_divisible_by_100?(num)
