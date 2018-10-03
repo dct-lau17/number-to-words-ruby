@@ -37,5 +37,9 @@ describe '#number_to_words' do
     it 'displays 900 as nine-hundred' do
       expect(number_to_words(900)).to eq 'nine-hundred'
     end
+
+    it 'displays 999 as nine-hundred and nine-nine' do
+      expect(number_to_words(999)).to eq 'nine-hundred and ninety-nine'
+    end
   end
 end

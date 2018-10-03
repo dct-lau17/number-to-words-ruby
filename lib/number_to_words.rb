@@ -58,13 +58,14 @@ def less_than_1000?(int)
   int < 1000
 end
 
-def hundreds(int)
-  convert_hundreds(int)
-end
-
-def convert_hundreds(num)
+def hundreds(num)
   num_array = num.to_s.split('')
   word = []
   word << [WORDS[num_array[0].to_i], WORDS[100]].join('-')
-  word.join
+  word << tens(num.to_s.slice(1,2).to_i) if not_divisible_by_100?(num)
+  word.join(' and ')
+end
+
+def not_divisible_by_100?(num)
+  num % 100 != 0
 end
