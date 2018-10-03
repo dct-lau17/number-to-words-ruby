@@ -18,8 +18,33 @@ WORDS = { 0 => 'zero',
           17 => 'seventeen',
           18 => 'eighteen',
           19 => 'nineteen',
-          20 => 'twenty' }.freeze
+          20 => 'twenty',
+          30 => 'thirty',
+          40 => 'forty',
+          50 => 'fifty',
+          60 => 'sixty',
+          70 => 'seventy',
+          80 => 'eighty',
+          90 => 'ninety',
+          100 => 'hundred',
+          1000 => 'thousand' }.freeze
 
-def number_to_words(num)
-  WORDS[num]
+def number_to_words(int)
+  if less_than_100?(int)
+    tens(int)
+  end
+end
+
+private
+
+def less_than_100?(int)
+  int < 100
+end
+
+def tens(int)
+  str = ''
+  if WORDS[int]
+    str = WORDS[int]
+  end
+  str
 end

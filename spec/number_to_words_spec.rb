@@ -11,13 +11,17 @@ describe '#number_to_words' do
     end
   end
 
-  context 'Numbers between 11 and 20' do
+  context 'Numbers less than 100' do
     it 'displays 11 as eleven' do
       expect(number_to_words(11)).to eq 'eleven'
     end
 
     it 'displays 20 as twenty' do
       expect(number_to_words(20)).to eq 'twenty'
+    end
+
+    it 'displays units in tens' do
+      expect(number_to_words(70)).to eq 'seventy'
     end
   end
 end
