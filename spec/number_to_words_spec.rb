@@ -23,5 +23,9 @@ describe '#number_to_words' do
     it 'displays units in tens' do
       expect(number_to_words(70)).to eq 'seventy'
     end
+
+    it 'displays 99 as ninety-nine' do
+      expect(number_to_words(99)).to eq 'ninety-nine'
+    end
   end
 end

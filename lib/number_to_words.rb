@@ -42,9 +42,12 @@ def less_than_100?(int)
 end
 
 def tens(int)
-  str = ''
-  if WORDS[int]
-    str = WORDS[int]
-  end
-  str
+  WORDS[int] || convert_tens(int)
+end
+
+def convert_tens(num)
+  int = num.to_s.split('')
+  tens = [int[0] + '0'].join('').to_i
+  units = int[1].to_i
+  [WORDS[tens], WORDS[units]].join('-')
 end
