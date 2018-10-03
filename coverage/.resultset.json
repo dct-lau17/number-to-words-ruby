@@ -1,0 +1,24 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/DLau/Desktop/kata-challenges/number-to-words/lib/number_to_words.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null
+      ]
+    },
+    "timestamp": 1538576776
+  }
+}
