@@ -1,4 +1,4 @@
-TENS = {  0 => 'zero',
+WORDS = { 0 => 'zero',
           1 => 'one',
           2 => 'two',
           3 => 'three',
@@ -8,18 +8,18 @@ TENS = {  0 => 'zero',
           7 => 'seven',
           8 => 'eight',
           9 => 'nine',
-          10 => 'ten' }.freeze
-ELEVEN_TO_TWENTY = { 11 => 'eleven',
-                     12 => 'twelve',
-                     13 => 'thirteen',
-                     14 => 'fourteen',
-                     15 => 'fifteen',
-                     16 => 'sixteen',
-                     17 => 'seventeen',
-                     18 => 'eighteen',
-                     19 => 'nineteen',
-                     20 => 'twenty' }.freeze
+          10 => 'ten',
+          11 => 'eleven',
+          12 => 'twelve',
+          13 => 'thirteen',
+          14 => 'fourteen',
+          15 => 'fifteen',
+          16 => 'sixteen',
+          17 => 'seventeen',
+          18 => 'eighteen',
+          19 => 'nineteen',
+          20 => 'twenty' }.freeze
 
 def number_to_words(num)
-  num <= 10 ? TENS[num] : ELEVEN_TO_TWENTY[num]
+  WORDS[num]
 end

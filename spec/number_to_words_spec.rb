@@ -16,7 +16,7 @@ describe '#number_to_words' do
       expect(number_to_words(11)).to eq 'eleven'
     end
 
-    it 'displays 11 as eleven' do
+    it 'displays 20 as twenty' do
       expect(number_to_words(20)).to eq 'twenty'
     end
   end
