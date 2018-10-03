@@ -32,6 +32,8 @@ WORDS = { 0 => 'zero',
 def number_to_words(int)
   if less_than_100?(int)
     tens(int)
+  elsif less_than_1000?(int)
+    hundreds(int)
   end
 end
 
@@ -50,4 +52,19 @@ def convert_tens(num)
   tens = [int[0] + '0'].join('').to_i
   units = int[1].to_i
   [WORDS[tens], WORDS[units]].join('-')
+end
+
+def less_than_1000?(int)
+  int < 1000
+end
+
+def hundreds(int)
+  convert_hundreds(int)
+end
+
+def convert_hundreds(num)
+  num_array = num.to_s.split('')
+  word = []
+  word << [WORDS[num_array[0].to_i], WORDS[100]].join('-')
+  word.join
 end

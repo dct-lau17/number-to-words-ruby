@@ -28,4 +28,14 @@ describe '#number_to_words' do
       expect(number_to_words(99)).to eq 'ninety-nine'
     end
   end
+
+  context 'Numbers between 100 and 1000' do
+    it 'displays 100 as one-hundred' do
+      expect(number_to_words(100)).to eq 'one-hundred'
+    end
+
+    it 'displays 900 as nine-hundred' do
+      expect(number_to_words(900)).to eq 'nine-hundred'
+    end
+  end
 end
